@@ -4,13 +4,17 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project views your device model and operating system version.
 
-A few resources to get you started if this is your first Flutter project:
+## Widgets used in HomePage:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  - Scaffold
+      - AppBar to view page title
+      - body
+          - Column to put widgets vertically
+              - Check platform type, then: InfoDisplayWidget to view device model and os version
+              - if data is not valid yet, a CircularProgressIndicator will show up
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Note that:
+  - getDeviceInfo function is created to get device info based on platform type
+  - This function is called in initState to get these info when the page starts
